@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Momentum</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<header>
+        <nav class="e">
+            <a href="index.html">Home</a>
+            <a href="/facts.html">Facts</a>
+           <a href="sum.html">Summary/Sources</a>
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img height="100%" width="100%" src="newton.jpeg">
+                <div class="content">
+                  <div class="x">
+                    <div class="author">*Credit: GiorgioGT*</div>
+                    <div class="title">MAX & LUKE</div>
+                    <div class="topic">MOMENTUM</div>
+                    <div class="des">
+                        Isaac Newton was a physicist, mathematician, astronomer, and author. He is known for his work on gravity, and motion. His properties shaped the laws of momentum.
+                    </div>
+                  </div>
+                    <div class="buttons">
+                        <button id="link1">SEE MORE</button>
+                      <button id="link1a">SOURCE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="mike.jpg">
+                <div class="content">
+                   <div class="x">
+                  <div class="author">Example Of Momentum</div>
+                  <div class="title">MAX & LUKE</div>
+                  <div class="topic">MOMENTUM</div>
+                    <div class="des">
+Mike Tyson is a former heavyweight boxing champion and because of the laws of momentum, he is able to punch very hard. This is why he is great, and how momentum is shown through his punches.
+                      
+                    </div>
+                   </div>
+                    <div class="buttons">
+                      <button id="link2">SEE MORE</button>
+                      <button id="link1a">SOURCE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="car.jpeg">
+                <div class="content">
+                  <div class="x">
+                  <div class="author">Vehicles</div>
+                  <div class="title">MAX & LUKE</div>
+                  <div class="topic">MOMENTUM</div>
+                    <div class="des">
+               Vehicles are an excellent example of momentum. A vehicle is only able to move because of the laws of momentum.
+                    </div>
+                  </div>
+                    <div class="buttons">
+                       <button id="link3">SEE MORE</button>
+                      <button id="link1a">SOURCE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="pendulum.jpeg">
+                <div class="content">
+                  <div class="x">
+                  <div class="author">Pendulum</div>
+                  <div class="title">MAX & LUKE</div>
+                  <div class="topic">MOMENTUM</div>
+                    <div class="des">
+                   A pendulum is another example of momentum. 
+                    </div>
+                  </div>
+                    <div class="buttons">
+                       <button id="link4">SEE MORE</button>
+                      <button id="link1a">SOURCE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="newtonpo.jpg">
+                <div class="content">
+                    <div class="title">
+                        Sr. Isaac Newton
+                    </div>
+                    <div class="description">
+                        Discovered Laws of Motion
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="mikepo.jpeg">
+                <div class="content">
+                    <div class="title">
+                        Mike Tyson 
+                    </div>
+                    <div class="description">
+                        Boxer
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="carr.jpeg">
+                <div class="content">
+                    <div class="title">
+                  
+                       Vehicles
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="penm.jpeg">
+                <div class="content">
+                    <div class="title">
+                        Pendulum
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+</body>
+  <script  src="./script.js"></script>
+  
+<script>
+  //link opener 1
+  let button1 = document.getElementById('link1');
+  button1.addEventListener('click', function() {
+      window.open('/facts/1.html', '_blank');
+  });
+  //link opener 2
+  let button2 = document.getElementById('link2');
+  button2.addEventListener('click', function() {
+      window.open('/facts/2.html', '_blank');
+  });
+  //link opener 3
+  let button3 = document.getElementById('link3');
+  button3.addEventListener('click', function() {
+      window.open('/facts/3.html', '_blank');
+  });
+  //link opener 4
+  let button4 = document.getElementById('link4');
+  button3.addEventListener('click', function() {
+      window.open('/facts/4.html', '_blank');
+  });
+  //link opener 1a
+  let button1a = document.getElementById('link1a');
+  button1a.addEventListener('click', function() {
+      window.open('./sum.html', '_blank');
+  });
+
+</script>
+</html>
