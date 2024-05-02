@@ -9,13 +9,42 @@ body{
 .q{
   color: blue;
 }
+.next2 {
+border: 0;
+background: white;
+border-radius: 10px;
+width: fit-content;
+padding: 10px;
+bottom: 20px; 
+left: 680px; 
+padding: 10px 20px;
+  text-align: center;
+  font-family: oswald;
+  color: black;
+}
+.next {
+  border: 0;
+  background: white;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+  bottom: 20px; 
+  left: 680px; 
+  padding: 10px 20px;
+    text-align: center;
+    font-family: oswald;
+    color: black;
+}
 .x{
   margin-top: -20px;
   
 }
 .x1{
   margin-top: -70px;
-
+}
+.x2{
+  margin-top: -70px;
+   font-size: 30px
 }
 #penm{
   margin-top: -20px;
