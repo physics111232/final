@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Momentum - Try It</title>
+  <link rel="stylesheet" href="./sum.css">
+  <style>
+      .answer {
+          display: none;
+      }
+#showAnswerButton,.generateButton{
+    border: 0;
+    background: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+    bottom: 20px; 
+    left: 680px; 
+    padding: 10px 20px;
+      text-align: center;
+      font-family: oswald;
+      color: black;
+      }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="e">
+      <a href="index.html">Home</a>
+      <a href="facts.html">Facts</a>
+     <a href="sum.html">Summary/Sources</a>
+    <a href="exa.html">Try It!</a>
+  </nav>
+    </header>
+  <div class="carousel">
+    <!-- list item -->
+    <div class="list">
+        <div class="item">
+            <div class="content">
+              <div class="x1">
+                <div class="topic">APPLY IT!</div>
+                 <div class="title">
+                   <div id="wordProblem">
+                     <!-- Placeholder for the word problem -->
+                   </div>
+                    <button onclick="generateProblem()" class="generateButton">Generate New Problem</button>
+
+                   <script>
+                   var answerShown = false;
+
+                   function generateProblem() {
+                     // Array of word problems
+                     var problems = [
+                         { question: "An 850 kg classic mint condition 1960 Volkswagen Beetle valued at over $60,000 is waiting at a stop light in neutral when a 2,500 kg 1995 Chevy Tahoe with peeling paint, dented fenders and funny sounds coming from the engine bay that’s maybe valued at less than, like, I dunno, maybe $2,000 or something is being driven at 55 miles per hour (about 25 m/s) by someone attempting to text and drive who doesn’t see that the light is red. What will the velocity of the cars be after they collide and get stuck together?", answer: "Using the principle of conservation of momentum (Pi = Pf):<br><br>Given:<br>- Mass of the Volkswagen Beetle (m1) = 850 kg<br>- Initial velocity of the Volkswagen Beetle (v1i) = 0 m/s<br>- Mass of the Chevy Tahoe (m2) = 2500 kg<br>- Initial velocity of the Chevy Tahoe (v2i) = 25 m/s (55 mph)<br><br>We need to find the final velocity (vf) after the collision.<br><br>Applying the conservation of momentum:<br>m1 * v1i + m2 * v2i = (m1 + m2) * vf<br><br>Substituting the values:<br>850 * 0 + 2500 * 25 = (850 + 2500) * vf<br>62500 = 3350 * vf<br><br>Solving for vf:<br>vf = 62500 / 3350 ≈ 18.66 m/s<br><br>So, the velocity of the cars after they collide and get stuck together is approximately 18.66 m/s." },
+                         { question: "In baseball, a home run is achieved by hitting a 0.15 kg ball over a fence that is 105 meters away. If it takes 3 seconds for the ball to reach the fence, how much momentum does the ball have?", answer: "Using p=mv, we can find the momentum of the ball.<br><br>Given:<br>- Mass of the ball (m) 0.15kg<br><br>- Now to find the velocity of the ball, we need to divide the distance by the time. <br> Velocity=<sup>105</sup>&frasl;<sub>3</sub>. Therefore, the velocity is 35<sup>m</sup>&frasl;<sub>s</sub>.<br><br>Answer: now inputing the values into p=mv, we get p=(0.15)35. Therefore the ball has a momentum of 5.25kg*m/s."},
+                         { question: "A 120 kg pro wrestler/figure skater lifts his 150 kg opponent while not moving and then throws him at a velocity of 2 m/s across the ice. How fast will the first wrestler begin skating backwards?", answer: "Using the principle of conservation of momentum (pi = pf):<br><br>Given:<br>- Mass of the pro wrestler/figure skater (m1) = 120 kg<br>- Mass of the opponent (m2) = 150 kg<br>- Initial velocity of the opponent (v2i) = 0 m/s (not moving)<br>- Final velocity of the opponent (v2f) = 2 m/s<br><br>We need to find the velocity (v1f) of the pro wrestler/figure skater after throwing his opponent.<br><br>Applying the conservation of momentum:<br>m1 * v1i + m2 * v2i = m1 * v1f + m2 * v2f<br>120 * 0 + 150 * 0 = 120 * v1f + 150 * 2<br>0 = 120 * v1f + 300<br>-300 = 120 * v1f<br>v1f = -300 / 120<br>v1f = -2.5 m/s (negative sign indicates direction)<br><br>So, the pro wrestler/figure skater will begin skating backwards at a velocity of 2.5 m/s." }
+                         // Add more problems as needed
+                     ];
+
+                     // Select a random problem
+                     var randomIndex = Math.floor(Math.random() * problems.length);
+                     var problem = problems[randomIndex];
+
+                     // Display the problem
+                     var problemDiv = document.getElementById("wordProblem");
+                     problemDiv.innerHTML = "<p>" + problem.question + "</p><button onclick='showAnswer(\"" + problem.answer + "\")' id='showAnswerButton'>Show Answer</button>";
+
+                     answerShown = false;
+                   }
+
+                   function showAnswer(answer) {
+                     if (!answerShown) {
+                         var answerDiv = document.createElement("div");
+                         answerDiv.className = "answer";
+                         answerDiv.innerHTML = "<p>" + answer + "</p>";
+                         var problemDiv = document.getElementById("wordProblem");
+                         problemDiv.appendChild(answerDiv);
+                         fadeIn(answerDiv);
+
+                         // Disable the button after showing the answer
+                         var showAnswerButton = document.getElementById("showAnswerButton");
+                         showAnswerButton.disabled = true;
+
+                         answerShown = true;
+                     }
+                   }
+
+                   function fadeIn(element) {
+                     var opacity = 0;
+                     var timer = setInterval(function() {
+                         if (opacity >= 1) {
+                             clearInterval(timer);
+                         }
+                         element.style.display = "block";
+                         element.style.opacity = opacity;
+                         opacity += 0.1;
+                     }, 50);
+                   }
+                   </script>
+
+                   
+                 </div>
+              </div>
+</body>
+</html>
