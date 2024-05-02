@@ -15,6 +15,9 @@ body {
   bottom: 20px; 
   left: 30px; 
   padding: 10px 20px;
+  text-align: center;
+  font-family: oswald;
+  color: black;
   }
   .next2 {
   border: 0;
@@ -26,6 +29,9 @@ body {
   bottom: 20px; 
   left: 680px; 
   padding: 10px 20px;
+    text-align: center;
+    font-family: oswald;
+    color: black;
   }
 header{
     width: 1140px;
